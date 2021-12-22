@@ -35,6 +35,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String docym() {
+    System.out.println(111);
         return "login";
     }
 
