@@ -1,0 +1,249 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <!-- jquery -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- jquery-validator -->
+    <script type="text/javascript" src="/jquery-validation/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/jquery-validation/localization/messages_zh.min.js"></script>
+    <!-- layer -->
+    <script type="text/javascript" src="/layer/layer.js"></script>
+    <!-- md5.js -->
+    <script type="text/javascript" src="/js/md5.min.js"></script>
+    <!-- common.js -->
+    <script type="text/javascript" src="/js/common.js"></script>
+
+</head>
+<body>
+
+
+<!--抽取头部公共页面-->
+<!--<header id="site-header" class="main-header">-->
+<!-- Logo -->
+<!--    <a class="logo">-->
+<!--        <span class="logo-lg"><b>商品抢购系统</b></span>-->
+<!--    </a>-->
+
+<!--    <nav class="navbar navbar-static-top">-->
+<!--         Sidebar toggle button-->
+<!--        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">-->
+<!--            <span class="sr-only">Toggle navigation</span>-->
+<!--            <span class="icon-bar"></span>-->
+<!--            <span class="icon-bar"></span>-->
+<!--            <span class="icon-bar"></span>-->
+<!--        </a>-->
+
+<!--        <div class="navbar-custom-menu">-->
+<!--            <ul class="nav navbar-nav">-->
+
+<!--                <li class="dropdown user user-menu">-->
+<!--&lt;!&ndash;                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="user-image" alt="User Image">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="hidden-xs"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </a>&ndash;&gt;-->
+<!--                    <ul class="dropdown-menu">-->
+<!--                        &lt;!&ndash; User image &ndash;&gt;-->
+<!--&lt;!&ndash;                        <li class="user-header">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <img class="img-circle" alt="User Image">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                Team B06 - Web Developer&ndash;&gt;-->
+<!--&lt;!&ndash;                                <small>2021.4.20</small>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--                        &lt;!&ndash; Menu Body &ndash;&gt;-->
+<!--                        <li class="user-body">-->
+<!--                        </li>-->
+<!--                        <li class="user-footer">-->
+<!--                            <div class="pull-middle">-->
+<!--                                <a onclick="toOut()" class="btn btn-lg btn-default btn-block">退出系统</a>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
+
+<div class="panel panel-default">
+    <div class="panel-heading">秒杀商品详情</div>
+    <div class="panel-body">
+        <span id="userTip"> 您还没有登录，请登陆后再操作<br/></span>
+        <span>没有收货地址的提示。。。</span>
+    </div>
+    <div class="container">
+        <table class="table" id="goods">
+            <tr>
+                <td>商品名称</td>
+                <td colspan="3" id="goodsName"></td>
+            </tr>
+            <tr>
+                <td>商品图片</td>
+                <td colspan="3"><img id="goodsImg" width="100" heights="100"/></td>
+            </tr>
+            <tr>
+                <td>秒杀开始时间</td>
+                <td id="startTime"></td>
+                <td>
+                    <input type="hidden" id="remainSeconds">
+                    <span id="seckillTip"></span>
+                </td>
+                <td>
+                    <!--                    <form id="seckillForm" method="post" action="/seckill/doSeckill">-->
+                    <!--                        <input type="hidden" name="goodsId" id="goodsId">-->
+                    <!--                        <button type="submit"  class="btn-primary btn btn-block" id="buyButton">-->
+                    <!--                            立即秒杀-->
+                    <!--                        </button>-->
+                    <!--                    </form>-->
+                    <button type="button" class="btn-primary btn btn-block" id="buyButton" onclick="doSeckill()">立即秒杀
+                    </button>
+                    <input type="hidden" id="goodsId" name="goodsId">
+                </td>
+            </tr>
+            <tr>
+                <td>商品原价</td>
+                <td colspan="3" id="goodsPrice"></td>
+            </tr>
+            <tr>
+                <td>秒杀价</td>
+                <td colspan="3" id="seckillPrice"></td>
+
+            </tr>
+
+            <tr>
+                <td>库存数量</td>
+                <td colspan="3" id="seckillCount"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        getDetails();
+    });
+
+
+    function doSeckill() {
+        $.ajax({
+            "url": "/seckill/doSeckill",
+            "type": 'POST',
+            "data": {
+                "goodsId": $("#goodsId").val()
+            },
+            "success": function (data) {
+                if (data.code == 200) {
+                    getResult($("#goodsId").val())
+                } else {
+                    layer.msg(data.message);
+                }
+            },
+            "error": function () {
+                layer.msg("错误");
+            }
+
+        });
+    }
+
+    function getResult(goodsId) {
+        g_showLoading();
+        $.ajax({
+            url: "/seckill/result",
+            type: "GET",
+            data: {
+                "goodsId": goodsId,
+            },
+            success: function (data) {
+                if (data.code == 200) {
+
+                    var result = data.obj;
+                    if (result < 0) {
+                        layer.msg("秒杀失败,排队中");
+                    } else if (result == 0) {
+                        setTimeout(function () {
+                            getResult(goodsId);
+                        }, 50);
+                    } else {
+                        layer.confirm("恭喜你,秒杀成功！查看订单？", {"btn": ["确定", "取消"]},
+                            function () {
+                                window.location.href = "/orderDetail.htm?orderId=" + result;
+                            },
+                            function () {
+                                layer.close();
+                            });
+                    }
+                }
+            },
+            error: function () {
+                layer.msg("客户端请求错误");
+            }
+        });
+    }
+
+    function getDetails() {
+        var goodsId = g_getQueryString("goodsId");
+        $.ajax({
+            "url": '/goods/toDetail/' + goodsId,
+            "type": 'GET',
+            success: function (data) {
+                if (data.code == 200) {
+                    render(data.obj);
+                } else {
+                    layer.msg("客户端出错！");
+                }
+            },
+            error: function () {
+                layer.msg("客户端请求出错！");
+            }
+        });
+    }
+
+    function render(detail) {
+        var user = detail.user;
+        var goods = detail.goodsVO;
+        var remainSeconds = detail.remainSeconds;
+        if (user) {
+            $("#userTip").hide();
+        }
+        $("#goodsName").text(goods.goodsName);
+        $("#goodsImg").attr("src", goods.goodsImg);
+        $("#startTime").text(new Date(goods.startDate).format("yyyy-MM-dd HH:mm:ss"));
+        $("#remainSeconds").val(remainSeconds);
+        $("#goodsId").val(goods.id);
+        $("#goodsPrice").text(goods.goodsPrice);
+        $("#seckillPrice").text(goods.seckillPrice);
+        $("#seckillCount").text(goods.stockCount);
+        countDown();
+    };
+
+    function countDown() {
+        var remainSeconds = $("#remainSeconds").val();
+        var timeout;
+        //秒杀倒计时
+        if (remainSeconds > 0) {
+            $("#buyButton").attr("disabled", true);
+            $("#seckillTip").html("秒杀倒计时" + remainSeconds + "秒");
+            timeout = setTimeout(function () {
+                $("#countDown").text(remainSeconds - 1);
+                $("#remainSeconds").val(remainSeconds - 1);
+                countDown();
+            }, 1000)
+        }
+        //秒杀进行中
+        else if (remainSeconds == 0) {
+            $("#buyButton").attr("disabled", false);
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            $("#seckillTip").html("秒杀进行中");
+        } else {
+            ("#buyButton").attr("disabled", true);
+            $("#seckillTip").html("秒杀已结束");
+        }
+    };
+
+</script>
+</html>

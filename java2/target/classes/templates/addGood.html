@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+</head>
+
+<!-- jquery -->
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/jquery-validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/jquery-validation/localization/messages_zh.min.js"></script>
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css"
+      href="/bootstrap/css/bootstrap.min.css"/>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js">
+</script>
+<!-- layer -->
+<script type="text/javascript" src="/layer/layer.js"></script>
+<!-- common.js -->
+<script type="text/javascript" src="/js/common.js"></script>
+
+<body>
+<header id="site-header" class="main-header">
+    <!-- Logo -->
+    <a class="logo" onclick="toList()">
+        <span class="logo-lg"><b>商品抢购</b>系统</span>
+    </a>
+
+    <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img class="user-image" alt="User Image">
+                        <span class="hidden-xs"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header">
+                            <img class="img-circle" alt="User Image">
+                            <p>
+                                Team B06 - Web Developer
+                                <small>2021.4.20</small>
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="user-body">
+                        </li>
+                        <li class="user-footer">
+                            <div class="pull-middle">
+                                <a onclick="toOut()" class="btn btn-lg btn-default btn-block">退出系统</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="box">
+    <div class="title">添加商品</div>
+    <div class="table">
+        <form id="addForm" method="post" autocomplete="off" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td>
+                        <lable class="lable">商品名称:</lable>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="商品名称" class="input" id="goodName" name="goodName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable class="lable">商品原价:</lable>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="商品原价" class="input" id="goodOrgPrice" name="goodOrgPrice">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable class="lable">抢购价格:</lable>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="抢购价格" class="input" id="goodSecKillPrice"
+                               name="goodSecKillPrice">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable class="lable">商品详情:</lable>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="商品详情" class="input" id="goodDetail" name="goodDetail">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <lable class="lable">商品库存:</lable>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="商品库存" class="input" id="stock" name="stock">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <lable class="lable">商品抢购数量:</lable>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="商品抢购数量" class="input" id="secKillAcc" name="secKillAcc">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable class="lable">抢购开始时间:</lable>
+                    </td>
+                    <td>
+                        <input type="date" placeholder="抢购开始时间" class="input" id="startTime" name="startTime">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable class="lable">抢购结束时间:</lable>
+                    </td>
+                    <td>
+                        <input type="date" placeholder="抢购结束时间" class="input" id="endTime" name="endTime">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable class="lable">上传图片信息:</lable>
+                    </td>
+                    <td>
+                        <a href="" class="a-upload">上传图片<input type="file" id="imgLoad" name="imgLoad"></a>
+                    </td>
+                </tr>
+            </table>
+            <div class="button">
+                <button class="button sumbit" onclick="addSuccess()">添加商品</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</body>
+
+<script>
+    function toOut() {
+        window.location.href = "/login/out";
+    }
+
+    function toList() {
+        window.location.href = "/goods/toList";
+    }
+
+    function addSuccess() {
+        $("#addForm").validate({
+            submitHandler: function (form) {
+                addGood();
+            }
+        });
+    }
+
+    function addGood() {
+        var goodName = $("#goodName").val();
+        var goodSecKillPrice = $("#goodSecKillPrice").val();
+        var goodOrgPrice = $("#goodOrgPrice").val();
+        var goodDetail = $("#goodDetail").val();
+        var stock = $("#stock").val();
+        var imgLoad = $("#imgLoad").val();
+        var startTime = $("#startTime").val();
+        var endTime = $("#endTime").val();
+        var secKillAcc = $("#secKillAcc").val();
+
+        if (goodName == "" || goodSecKillPrice == ""
+            || goodOrgPrice == "" || goodDetail == ""
+            || stock == "" || imgLoad == "" || startTime == ""
+            || endTime == "" || secKillAcc == "") {
+            layer.msg("信息填写不完整，重新填写表单。", {time: 2000});
+        } else {
+            if (endTime < startTime) {
+                layer.msg("抢购时间不合法，请重新选择抢购时间范围", {time: 2000});
+            } else {
+                g_showLoading();
+                var formdata = new FormData(document.getElementById('addForm'));
+                $.ajax({
+                    url: "/goods/addGood",
+                    type: "POST",
+                    processData: false,  //不处理发送的数据
+                    contentType: false,  //不设置Content-Type请求头
+                    dataType: "json",
+                    data: formdata,
+                    success: function (data) {
+                        if (data.code == 200) {
+                            layer.msg("成功");
+                            window.location.href = "/goods/toList";
+                        } else {
+                            layer.msg(data.message);
+                        }
+                    },
+                    error: function () {
+                        console.log(formdata);
+                    }
+                });
+            }
+        }
+    }
+</script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 11px;
+    }
+
+    body {
+        background: #cbc0d3;
+    }
+
+    .main-header {
+        width: 100%;
+        height: 100px;
+        background: #eac7cc;
+        display: block;
+    }
+
+    .navbar {
+        display: inline-block;
+        float: right;
+        margin-right: 50px;
+        margin-top: 30px;
+    }
+
+    .logo {
+        display: inline-block;
+        margin-top: 30px;
+        margin-left: 30px;
+        text-decoration: none;
+    }
+
+    .logo-lg {
+        font-size: 20px;
+        font-weight: lighter;
+        color: #232324;
+    }
+
+    .logo-lg > b {
+        font-size: 20px;
+        font-weight: lighter;
+        color: #232324;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #cbc0d3;
+    }
+
+    .button {
+        padding: 12px;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        margin: 1px auto;
+        letter-spacing: 3px;
+        font-size: 11px;
+        border-radius: 10px;
+        outline: none;
+        display: block;
+    }
+
+    .box {
+        width: 800px;
+        height: 700px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background: #eac7cc;
+    }
+
+    .input {
+        background: #F2F2F2;
+        width: 65%;
+        color: #0f0f0f;
+        border: none;
+        border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+        padding: 9px;
+        font-weight: 100;
+        letter-spacing: 3px;
+        font-size: 12px;
+        border-radius: 10px;
+        outline: none;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .a-upload {
+        width: 65%;
+        padding: 4px 10px;
+        height: 20px;
+        line-height: 20px;
+        position: relative;
+        cursor: pointer;
+        font-weight: 100;
+        color: #888;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        margin-top: 5px;
+    }
+
+    .a-upload input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer
+    }
+
+    .a-upload:hover {
+        color: #444;
+        background: #eee;
+        border-color: #ccc;
+        text-decoration: none
+    }
+
+    table {
+        margin: 40px auto;
+    }
+
+    .title {
+        background: #eac7cc;
+        width: 65%;
+        color: #0f0f0f;
+        border: none;
+        padding: 30px;
+        font-weight: 100;
+        font-size: 40px;
+        letter-spacing: 20px;
+        border-radius: 10px;
+        outline: none;
+        display: block;
+        margin: 40px auto;
+    }
+
+    .lable {
+        color: #0f0f0f;
+        border: none;
+        font-weight: 200;
+        font-size: 18px;
+        letter-spacing: 5px;
+        outline: none
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+
+</html>

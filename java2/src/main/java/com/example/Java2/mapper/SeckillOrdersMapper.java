@@ -1,0 +1,18 @@
+package com.example.Java2.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.Java2.pojo.SeckillOrders;
+import org.springframework.stereotype.Component;
+
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author cym
+ * @since 2021-12-14
+ */
+@Component
+public interface SeckillOrdersMapper extends BaseMapper<SeckillOrders> {
+
+}
