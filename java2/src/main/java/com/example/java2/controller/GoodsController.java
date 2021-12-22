@@ -3,15 +3,15 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.controller;
+package com.example.java2.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.example.Java2.pojo.User;
-import com.example.Java2.service.IGoodsService;
-import com.example.Java2.service.IUserService;
-import com.example.Java2.vo.DetailVo;
-import com.example.Java2.vo.GoodsVO;
-import com.example.Java2.vo.RespBean;
+import com.example.java2.pojo.User;
+import com.example.java2.service.IGoodsService;
+import com.example.java2.service.IUserService;
+import com.example.java2.vo.DetailVo;
+import com.example.java2.vo.GoodsVO;
+import com.example.java2.vo.RespBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;

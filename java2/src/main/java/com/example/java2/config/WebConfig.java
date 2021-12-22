@@ -1,6 +1,6 @@
-package com.example.Java2.config;
+package com.example.java2.config;
 
-import com.example.Java2.LocaleResolver.MyLocaleResolver;
+import com.example.java2.LocaleResolver.MyLocaleResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

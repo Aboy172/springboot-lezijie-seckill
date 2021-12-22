@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.vaildator;
+package com.example.java2.vaildator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

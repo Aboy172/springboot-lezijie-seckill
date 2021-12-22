@@ -1,12 +1,12 @@
-package com.example.Java2.rabbitmq;
+package com.example.java2.rabbitmq;
 
-import com.example.Java2.pojo.SeckillMessage;
-import com.example.Java2.pojo.SeckillOrders;
-import com.example.Java2.pojo.User;
-import com.example.Java2.service.IGoodsService;
-import com.example.Java2.service.IOrderService;
-import com.example.Java2.utils.JsonUtil;
-import com.example.Java2.vo.GoodsVO;
+import com.example.java2.pojo.SeckillMessage;
+import com.example.java2.pojo.SeckillOrders;
+import com.example.java2.pojo.User;
+import com.example.java2.service.IGoodsService;
+import com.example.java2.service.IOrderService;
+import com.example.java2.utils.JsonUtil;
+import com.example.java2.vo.GoodsVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;

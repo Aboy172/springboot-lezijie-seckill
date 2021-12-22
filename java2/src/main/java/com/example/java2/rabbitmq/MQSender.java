@@ -1,6 +1,6 @@
-package com.example.Java2.rabbitmq;
+package com.example.java2.rabbitmq;
 
-import com.example.Java2.utils.JsonUtil;
+import com.example.java2.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;

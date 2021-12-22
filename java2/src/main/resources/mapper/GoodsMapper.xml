@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.Java2.mapper.GoodsMapper">
+<mapper namespace="com.example.java2.mapper.GoodsMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.example.Java2.pojo.Goods">
+    <resultMap id="BaseResultMap" type="com.example.java2.pojo.Goods">
         <id column="id" property="id"/>
         <result column="goods_name" property="goodsName"/>
         <result column="goos_title" property="goosTitle"/>
@@ -17,7 +17,7 @@
     <sql id="Base_Column_List">
         id, goods_name, goos_title, goods_img, goods_detail, goods_price, goods_stock
     </sql>
-    <select id="findGoodsVo" resultType="com.example.Java2.vo.GoodsVO">
+    <select id="findGoodsVo" resultType="com.example.java2.vo.GoodsVO">
         SELECT
         g.id,
         goods_name,
@@ -35,7 +35,7 @@
         LEFT JOIN t_seckill_goods sg ON g.id = sg.goods_id;
     </select>
 
-    <select id="findGoodsVoByGoodsId" resultType="com.example.Java2.vo.GoodsVO">
+    <select id="findGoodsVoByGoodsId" resultType="com.example.java2.vo.GoodsVO">
         SELECT
         g.id,
         g.goods_name,

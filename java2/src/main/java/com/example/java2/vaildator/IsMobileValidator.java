@@ -3,9 +3,9 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.vaildator;
+package com.example.java2.vaildator;
 
-import com.example.Java2.utils.VaildatorUtil;
+import com.example.java2.utils.VaildatorUtil;
 import org.thymeleaf.util.StringUtils;
 
 import javax.validation.ConstraintValidator;

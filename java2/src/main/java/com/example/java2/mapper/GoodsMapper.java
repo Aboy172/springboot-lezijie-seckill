@@ -1,8 +1,8 @@
-package com.example.Java2.mapper;
+package com.example.java2.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.Java2.pojo.Goods;
-import com.example.Java2.vo.GoodsVO;
+import com.example.java2.pojo.Goods;
+import com.example.java2.vo.GoodsVO;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

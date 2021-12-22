@@ -3,12 +3,12 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.controller;
+package com.example.java2.controller;
 
-import com.example.Java2.service.IUserService;
-import com.example.Java2.vo.LoginVo;
-import com.example.Java2.vo.RegisterVo;
-import com.example.Java2.vo.RespBean;
+import com.example.java2.service.IUserService;
+import com.example.java2.vo.LoginVo;
+import com.example.java2.vo.RegisterVo;
+import com.example.java2.vo.RespBean;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -39,9 +39,10 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/doLogin")
-    @ResponseBody
-    RespBean dologin2(@Valid LoginVo loginVo, HttpServletRequest request, HttpServletResponse response) {
+  @PostMapping("/doLogin")
+  @ResponseBody
+  RespBean dologin(
+      @Valid LoginVo loginVo, HttpServletRequest request, HttpServletResponse response) {
         log.info("{}", loginVo);
         return userService.doLogin(loginVo, request, response);
 

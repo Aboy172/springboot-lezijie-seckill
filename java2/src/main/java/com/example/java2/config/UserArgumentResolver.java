@@ -1,8 +1,8 @@
-package com.example.Java2.config;
+package com.example.java2.config;
 
-import com.example.Java2.pojo.User;
-import com.example.Java2.service.IUserService;
-import com.example.Java2.utils.CookieUtil;
+import com.example.java2.pojo.User;
+import com.example.java2.service.IUserService;
+import com.example.java2.utils.CookieUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;

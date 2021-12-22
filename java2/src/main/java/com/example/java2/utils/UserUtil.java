@@ -1,7 +1,7 @@
-package com.example.Java2.utils;
+package com.example.java2.utils;
 
-import com.example.Java2.pojo.User;
-import com.example.Java2.vo.RespBean;
+import com.example.java2.pojo.User;
+import com.example.java2.vo.RespBean;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;

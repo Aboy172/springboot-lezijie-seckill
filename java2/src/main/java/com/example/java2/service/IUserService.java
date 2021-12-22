@@ -1,10 +1,10 @@
-package com.example.Java2.service;
+package com.example.java2.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.Java2.pojo.User;
-import com.example.Java2.vo.LoginVo;
-import com.example.Java2.vo.RegisterVo;
-import com.example.Java2.vo.RespBean;
+import com.example.java2.pojo.User;
+import com.example.java2.vo.LoginVo;
+import com.example.java2.vo.RegisterVo;
+import com.example.java2.vo.RespBean;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

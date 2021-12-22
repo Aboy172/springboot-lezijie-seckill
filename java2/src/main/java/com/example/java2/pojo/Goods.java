@@ -1,4 +1,4 @@
-package com.example.Java2.pojo;
+package com.example.java2.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

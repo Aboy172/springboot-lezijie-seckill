@@ -1,6 +1,6 @@
-package com.example.Java2.vo;
+package com.example.java2.vo;
 
-import com.example.Java2.pojo.Order;
+import com.example.java2.pojo.Order;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

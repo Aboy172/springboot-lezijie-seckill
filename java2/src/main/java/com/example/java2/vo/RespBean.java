@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.vo;
+package com.example.java2.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

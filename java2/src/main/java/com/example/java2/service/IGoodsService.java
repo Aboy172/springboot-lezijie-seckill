@@ -1,8 +1,8 @@
-package com.example.Java2.service;
+package com.example.java2.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.Java2.pojo.Goods;
-import com.example.Java2.vo.GoodsVO;
+import com.example.java2.pojo.Goods;
+import com.example.java2.vo.GoodsVO;
 
 import java.util.List;
 

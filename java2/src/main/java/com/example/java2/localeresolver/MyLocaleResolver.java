@@ -1,4 +1,4 @@
-package com.example.Java2.LocaleResolver;
+package com.example.java2.LocaleResolver;
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import org.springframework.web.servlet.LocaleResolver;

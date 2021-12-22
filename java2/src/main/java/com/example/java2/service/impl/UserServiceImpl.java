@@ -3,21 +3,21 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.service.impl;
+package com.example.java2.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.Java2.exception.GlobalException;
-import com.example.Java2.mapper.UserMapper;
-import com.example.Java2.pojo.User;
-import com.example.Java2.service.IUserService;
-import com.example.Java2.utils.CookieUtil;
-import com.example.Java2.utils.MD5Util;
-import com.example.Java2.utils.UUIDUtil;
-import com.example.Java2.utils.ValidatorUtil;
-import com.example.Java2.vo.LoginVo;
-import com.example.Java2.vo.RegisterVo;
-import com.example.Java2.vo.RespBean;
-import com.example.Java2.vo.RespBeanEnum;
+import com.example.java2.exception.GlobalException;
+import com.example.java2.mapper.UserMapper;
+import com.example.java2.pojo.User;
+import com.example.java2.service.IUserService;
+import com.example.java2.utils.CookieUtil;
+import com.example.java2.utils.MD5Util;
+import com.example.java2.utils.UUIDUtil;
+import com.example.java2.utils.ValidatorUtil;
+import com.example.java2.vo.LoginVo;
+import com.example.java2.vo.RegisterVo;
+import com.example.java2.vo.RespBean;
+import com.example.java2.vo.RespBeanEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

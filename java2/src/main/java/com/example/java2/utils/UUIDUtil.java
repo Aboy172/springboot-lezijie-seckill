@@ -3,7 +3,7 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.utils;
+package com.example.java2.utils;
 
 import java.util.UUID;
 

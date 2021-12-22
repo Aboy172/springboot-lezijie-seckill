@@ -1,4 +1,4 @@
-package com.example.Java2.config;
+package com.example.java2.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

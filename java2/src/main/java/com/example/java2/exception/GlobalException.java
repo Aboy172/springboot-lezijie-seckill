@@ -3,9 +3,9 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.exception;
+package com.example.java2.exception;
 
-import com.example.Java2.vo.RespBeanEnum;
+import com.example.java2.vo.RespBeanEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

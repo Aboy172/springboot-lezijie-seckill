@@ -1,10 +1,10 @@
-package com.example.Java2.service.impl;
+package com.example.java2.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.Java2.mapper.GoodsMapper;
-import com.example.Java2.pojo.Goods;
-import com.example.Java2.service.IGoodsService;
-import com.example.Java2.vo.GoodsVO;
+import com.example.java2.mapper.GoodsMapper;
+import com.example.java2.pojo.Goods;
+import com.example.java2.service.IGoodsService;
+import com.example.java2.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

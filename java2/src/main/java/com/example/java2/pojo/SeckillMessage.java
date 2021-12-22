@@ -1,4 +1,4 @@
-package com.example.Java2.pojo;
+package com.example.java2.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

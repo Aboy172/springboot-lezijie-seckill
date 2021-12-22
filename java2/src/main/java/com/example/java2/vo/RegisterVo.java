@@ -1,4 +1,4 @@
-package com.example.Java2.vo;
+package com.example.java2.vo;
 
 import lombok.Data;
 

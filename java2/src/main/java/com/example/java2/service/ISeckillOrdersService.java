@@ -1,8 +1,8 @@
-package com.example.Java2.service;
+package com.example.java2.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.Java2.pojo.SeckillOrders;
-import com.example.Java2.pojo.User;
+import com.example.java2.pojo.SeckillOrders;
+import com.example.java2.pojo.User;
 
 /**
  * <p>

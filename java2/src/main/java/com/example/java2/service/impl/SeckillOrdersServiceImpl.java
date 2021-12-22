@@ -1,11 +1,11 @@
-package com.example.Java2.service.impl;
+package com.example.java2.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.Java2.mapper.SeckillOrdersMapper;
-import com.example.Java2.pojo.SeckillOrders;
-import com.example.Java2.pojo.User;
-import com.example.Java2.service.ISeckillOrdersService;
+import com.example.java2.mapper.SeckillOrdersMapper;
+import com.example.java2.pojo.SeckillOrders;
+import com.example.java2.pojo.User;
+import com.example.java2.service.ISeckillOrdersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

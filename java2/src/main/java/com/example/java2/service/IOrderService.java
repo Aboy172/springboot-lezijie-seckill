@@ -1,10 +1,10 @@
-package com.example.Java2.service;
+package com.example.java2.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.Java2.pojo.Order;
-import com.example.Java2.pojo.User;
-import com.example.Java2.vo.GoodsVO;
-import com.example.Java2.vo.orderDetailVo;
+import com.example.java2.pojo.Order;
+import com.example.java2.pojo.User;
+import com.example.java2.vo.GoodsVO;
+import com.example.java2.vo.orderDetailVo;
 
 /**
  * <p>

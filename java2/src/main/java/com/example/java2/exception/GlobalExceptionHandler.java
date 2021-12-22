@@ -3,10 +3,10 @@
 // (powered by FernFlower decompiler)
 //
 
-package com.example.Java2.exception;
+package com.example.java2.exception;
 
-import com.example.Java2.vo.RespBean;
-import com.example.Java2.vo.RespBeanEnum;
+import com.example.java2.vo.RespBean;
+import com.example.java2.vo.RespBeanEnum;
 import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ExceptionHandler;

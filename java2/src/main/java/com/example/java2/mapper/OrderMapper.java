@@ -1,7 +1,7 @@
-package com.example.Java2.mapper;
+package com.example.java2.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.Java2.pojo.Order;
+import com.example.java2.pojo.Order;
 import org.springframework.stereotype.Component;
 
 /**

@@ -1,7 +1,7 @@
-package com.example.Java2.service;
+package com.example.java2.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.Java2.pojo.SeckillGoods;
+import com.example.java2.pojo.SeckillGoods;
 
 /**
  * <p>
