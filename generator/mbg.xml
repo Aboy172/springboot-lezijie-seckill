@@ -25,10 +25,9 @@
         <javaTypeResolver >
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
-
         <!-- 指定javaBean逆生成位置 -->
         <javaModelGenerator
-                targetPackage="cn.csdn.bean"
+                targetPackage="com.site.blog.my.core.entity"
                 targetProject=".\src\main\java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
@@ -44,16 +43,15 @@
         <!-- 指定dao接口生成的位置，mapper接口 -->
         <javaClientGenerator
                 type="XMLMAPPER"
-                targetPackage="cn.csdn.dao"
+                targetPackage="com.site.blog.my.core.dao"
                 targetProject=".\src\main\java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
         <!-- 指定每个表的生成策略 -->
-        <table tableName="message" domainObjectName="Message"></table>
-        <table tableName="product" domainObjectName="Product"></table>
-        <table tableName="revert" domainObjectName="Revert"></table>
-        <table tableName="user" domainObjectName="User"></table>
+        <table schema="mybatis" tableName="employees"/>
+
+
 
     </context>
 </generatorConfiguration>

@@ -21,8 +21,6 @@ import java.util.*;
 /**
  * 执行 main 方法控制台输入模块表名回车自动生成对应项目目录中
  *
- * @author zhoubin
- * @since 1.0.0
  */
 
 public class CodeGenerator {
@@ -53,7 +51,7 @@ public class CodeGenerator {
 		// 全局配置
 		GlobalConfig gc = new GlobalConfig();
 		String projectPath = System.getProperty("user.dir");
-		gc.setOutputDir(projectPath + "/cym-generator/src/main/java");
+		gc.setOutputDir(projectPath + "/com.site.blog.my.core/src/main/java");
 		//作者
 		gc.setAuthor("cym");
 		//打开输出目录
@@ -69,15 +67,15 @@ public class CodeGenerator {
 
 		// 数据源配置
 		DataSourceConfig dsc = new DataSourceConfig();
-		dsc.setUrl("jdbc:mysql://49.234.138.59/seckill");
+		dsc.setUrl("jdbc:mysql://localhost:3306/atguigudb");
 		dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-		dsc.setUsername("seckill");
+		dsc.setUsername("root");
 		dsc.setPassword("my159357");
 		mpg.setDataSource(dsc);
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.setParent("com.example.java2")
+		pc.setParent("com.site.blog.my.core")
 				.setEntity("pojo")
 				.setMapper("mapper")
 				.setService("service")
@@ -108,7 +106,7 @@ public class CodeGenerator {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
 				// 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-				return projectPath + "/cym-generator/src/main/resources/mapper/" + tableInfo.getEntityName() + "Mapper"
+				return projectPath + "/com.site.blog.my.core/src/main/resources/mapper/" + tableInfo.getEntityName() + "Mapper"
 						+ StringPool.DOT_XML;
 			}
 		});
@@ -116,13 +114,7 @@ public class CodeGenerator {
 		mpg.setCfg(cfg);
 
 		// 配置模板
-		TemplateConfig templateConfig = new TemplateConfig()
-				.setEntity("templates/entity2.java")
-				.setMapper("templates/mapper2.java")
-				.setService("templates/service2.java")
-				.setServiceImpl("templates/serviceImpl2.java")
-				.setController("templates/controller2.java");
-
+		TemplateConfig templateConfig = new TemplateConfig();
 		templateConfig.setXml(null);
 		mpg.setTemplate(templateConfig);
 
@@ -139,7 +131,7 @@ public class CodeGenerator {
 		strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
 		strategy.setControllerMappingHyphenStyle(true);
 		//表前缀
-		strategy.setTablePrefix("t_");
+		strategy.setTablePrefix("c_");
 		mpg.setStrategy(strategy);
 		mpg.setTemplateEngine(new FreemarkerTemplateEngine());
 		mpg.execute();

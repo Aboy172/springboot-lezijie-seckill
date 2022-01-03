@@ -4,14 +4,110 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76c56b15-d923-4cbe-b205-2733b21ab947" name="Changes" comment="">
+    <list default="true" id="76c56b15-d923-4cbe-b205-2733b21ab947" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/../.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/google-java-format.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mbg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/generator/MBGTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/xxxx/generator/MBGTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java2/.idea/libraries/Maven__com_github_whvcse_easy_captcha_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/9/e/9e43edc5e9a08fdfb0eec9b9f21ae306434b46d1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/c/3/c39e2e64916f980e7822e700de60b034a856fafb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/c/6/c6fc9504194ce1fa0c7d92a3bc402f596a2d1831" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/f/f/ff143c5b45b46c814933115b2e1298c554b68591" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fc2c953891995224e2635b6f5711ef90abee075" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9dc17e248a59e351f94c93e2a164af1c9f0cf65c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/Java2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/Java2/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/cym/mapper/CRootMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/cym/service/ICRootService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/cym/service/impl/CRootServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/controller/GoodsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/controller/SeckillGoodsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/controller/SeckillOrdersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/mapper/GoodsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/mapper/SeckillGoodsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/mapper/SeckillOrdersMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/pojo/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/pojo/SeckillGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/pojo/SeckillOrders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/service/IGoodsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/service/ISeckillGoodsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/service/ISeckillOrdersService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/service/impl/GoodsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/service/impl/SeckillGoodsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/java/com/example/java2/service/impl/SeckillOrdersServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/resources/mapper/CRootMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/resources/mapper/GoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/resources/mapper/SeckillGoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cym-generator/src/main/resources/mapper/SeckillOrdersMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/generator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/generator/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xxxx/generator/GeneratorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xxxx/generator/GeneratorApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/controller2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/entity2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mapper2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/service2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/serviceImpl2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/generator/CodeGenerator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/generator/CodeGenerator$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/generator/CodeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xxxx/generator/GeneratorApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/controller2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/entity2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mapper2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/service2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/serviceImpl2.java.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/xxxx/generator/GeneratorApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/1/a/1a7f46261039bf588f94d7a7fd8db731863044f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/7/d/7d5125192052b6f632accfc3f5956ca54ed95f9d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/9/3/93ac89576984bc54074974ca026974ffd3eccfdd" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/9/3/93ac89576984bc54074974ca026974ffd3eccfdd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/b/e/bea772de4a45cd2608533c732e2dff19fcc517ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/c/a/ca498c1caa33bcd44fe22254b10c27eb4de2d058" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/c/a/ca498c1caa33bcd44fe22254b10c27eb4de2d058" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/java2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/java2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/config/RabbitMQConfigTopic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/config/RabbitMQConfigTopic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/controller/SeckillGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/controller/SeckillGoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/utils/UserUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/vo/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/java/com/example/java2/vo/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/resources/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/resources/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/resources/static/goodsDetail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/resources/static/goodsDetail.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/config/RabbitMQConfigTopic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/config/RabbitMQConfigTopic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/controller/SeckillGoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/controller/SeckillGoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/utils/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/utils/UserUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/vo/RespBeanEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/com/example/Java2/vo/RespBeanEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/static/goodsDetail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/static/goodsDetail.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java2/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../java2/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Alibaba Cloud ROS Template (YAML)" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -37,6 +133,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultYamlROSTemplate" value="Alibaba Cloud ROS Template (YAML)" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -45,7 +142,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -56,13 +153,30 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\博客\springboot-seckill\generator\src" />
       <recent name="D:\分布式秒杀\generator\src\main\resources\templates" />
       <recent name="D:\分布式秒杀\generator\src\main\java\com\xxxx\generator" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\博客\springboot-seckill\generator" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GeneratorApplication">
+  <component name="RunManager" selected="应用程序.MBGTest">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xxxx.generator.CodeGenerator" />
+      <module name="generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xxxx.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MBGTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xxxx.generator.MBGTest" />
       <module name="generator" />
       <extension name="coverage">
         <pattern>
@@ -81,8 +195,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.MBGTest" />
+        <item itemvalue="应用程序.CodeGenerator" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="76c56b15-d923-4cbe-b205-2733b21ab947" name="Changes" comment="" />
@@ -112,6 +235,14 @@
       <workItem from="1639471581870" duration="610000" />
       <workItem from="1639545793694" duration="1455000" />
       <workItem from="1639860872954" duration="1799000" />
+      <workItem from="1640194934839" duration="652000" />
+      <workItem from="1640197823262" duration="624000" />
+      <workItem from="1640225539886" duration="240000" />
+      <workItem from="1640771062545" duration="804000" />
+      <workItem from="1640772405370" duration="1098000" />
+      <workItem from="1640778782141" duration="5221000" />
+      <workItem from="1640846104696" duration="165000" />
+      <workItem from="1641082063008" duration="33000" />
     </task>
     <servers />
   </component>
