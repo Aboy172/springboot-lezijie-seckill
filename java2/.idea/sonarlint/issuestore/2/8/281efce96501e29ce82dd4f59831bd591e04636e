@@ -1,0 +1,19 @@
+
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÏåŸéüÿÿÿÿ
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÏåŸéüÿÿÿÿ
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(ò…ùŸúÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(¯Éö÷
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(é°ÂÈøÿÿÿÿ
+d
+java:S1192"IDefine a constant instead of duplicating this literal "1a2b3c4d" 3 times.(ÔŠ»¹úÿÿÿÿ
+q
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "md5".(• ·°
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(ò…ùŸúÿÿÿÿ
+N	java:S106("9Replace this use of System.out or System.err by a logger.(¯Éö÷
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(é°ÂÈøÿÿÿÿ
+d
+java:S1192"IDefine a constant instead of duplicating this literal "1a2b3c4d" 3 times.(ÔŠ»¹úÿÿÿÿ
+q
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "md5".(• ·°

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.site.blog.my.core.dao.EmployeesMapper">
+  <resultMap id="BaseResultMap" type="com.site.blog.my.core.entity.Employees">
+    <id column="employee_id" jdbcType="INTEGER" property="employeeId" />
+    <result column="first_name" jdbcType="VARCHAR" property="firstName" />
+    <result column="last_name" jdbcType="VARCHAR" property="lastName" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="phone_number" jdbcType="VARCHAR" property="phoneNumber" />
+    <result column="hire_date" jdbcType="DATE" property="hireDate" />
+    <result column="job_id" jdbcType="VARCHAR" property="jobId" />
+    <result column="salary" jdbcType="DOUBLE" property="salary" />
+    <result column="commission_pct" jdbcType="DOUBLE" property="commissionPct" />
+    <result column="manager_id" jdbcType="INTEGER" property="managerId" />
+    <result column="department_id" jdbcType="INTEGER" property="departmentId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employees
+    where employee_id = #{employeeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.site.blog.my.core.entity.Employees">
+    insert into employees (employee_id, first_name, last_name, 
+      email, phone_number, hire_date, 
+      job_id, salary, commission_pct, 
+      manager_id, department_id)
+    values (#{employeeId,jdbcType=INTEGER}, #{firstName,jdbcType=VARCHAR}, #{lastName,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, #{hireDate,jdbcType=DATE}, 
+      #{jobId,jdbcType=VARCHAR}, #{salary,jdbcType=DOUBLE}, #{commissionPct,jdbcType=DOUBLE}, 
+      #{managerId,jdbcType=INTEGER}, #{departmentId,jdbcType=INTEGER})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.site.blog.my.core.entity.Employees">
+    update employees
+    set first_name = #{firstName,jdbcType=VARCHAR},
+      last_name = #{lastName,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      phone_number = #{phoneNumber,jdbcType=VARCHAR},
+      hire_date = #{hireDate,jdbcType=DATE},
+      job_id = #{jobId,jdbcType=VARCHAR},
+      salary = #{salary,jdbcType=DOUBLE},
+      commission_pct = #{commissionPct,jdbcType=DOUBLE},
+      manager_id = #{managerId,jdbcType=INTEGER},
+      department_id = #{departmentId,jdbcType=INTEGER}
+    where employee_id = #{employeeId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select employee_id, first_name, last_name, email, phone_number, hire_date, job_id, 
+    salary, commission_pct, manager_id, department_id
+    from employees
+    where employee_id = #{employeeId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select employee_id, first_name, last_name, email, phone_number, hire_date, job_id, 
+    salary, commission_pct, manager_id, department_id
+    from employees
+  </select>
+</mapper>

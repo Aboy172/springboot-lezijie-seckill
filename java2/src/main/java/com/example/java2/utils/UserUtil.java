@@ -28,27 +28,27 @@ public class UserUtil {
             users.add(user);
         }
         System.out.println("create user");
-//        Connection conn = getConn();
-//        String sql = "insert into t_user(id,nickname,password,slat,register_date,login_count) values(?,?,?,?,?,?)";
-//        PreparedStatement pstmt = conn.pre pareStatement(sql);
-//        for (int i = 0; i < users.size(); i++) {
-//            User user = users.get(i);
-//            pstmt.setInt(6,user.getLogin_count());
-//            pstmt.setString(2,user.getNickname());
-//            pstmt.setString(3,user.getPassword());
-//            pstmt.setString(4,user.getSlat());
-//            pstmt.setTimestamp(5,new Timestamp(user.getRegister_date().getTime()));
-//            pstmt.setLong(1,user.getId());
-//            pstmt.addBatch();
-//        }
-//        pstmt.executeBatch();
-//        pstmt.clearParameters();
-//        conn.close();
-//        System.out.println("insert to db");
+    //        Connection conn = getConn();
+    //        String sql = "insert into t_user(id,nickname,password,slat,register_date,login_count)
+    // values(?,?,?,?,?,?)";
+    //        PreparedStatement pstmt = conn.pre pareStatement(sql);
+    //        for (int i = 0; i < users.size(); i++) {
+    //            User user = users.get(i);
+    //            pstmt.setInt(6,user.getLogin_count());
+    //            pstmt.setString(2,user.getNickname());
+    //            pstmt.setString(3,user.getPassword());
+    //            pstmt.setString(4,user.getSlat());
+    //            pstmt.setTimestamp(5,new Timestamp(user.getRegister_date().getTime()));
+    //            pstmt.setLong(1,user.getId());
+    //            pstmt.addBatch();
+    //        }
+    //        pstmt.executeBatch();
+    //        pstmt.clearParameters();
+    //        conn.close();
+    //        System.out.println("insert to db");
 
-
-        //生成登录的userTicket
-        String urlString = "http://localhost:8005/login";
+    // 生成登录的userTicket
+    String urlString = "http://localhost:8005/doLogin";
         File file = new File("C:\\Users\\86152\\Desktop\\config.txt");
         if (file.exists()) {
             boolean delete = file.delete();
@@ -103,6 +103,6 @@ public class UserUtil {
     }
 
     public static void main (String[] args) throws Exception {
-        createUser(30);
+    createUser(5000);
     }
 }

@@ -37,11 +37,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Autowired
     private RedisTemplate redisTemplate;
 
-
-    public UserServiceImpl ( ) {
-    }
-
-    public RespBean doLogin (LoginVo loginVo,HttpServletRequest request,HttpServletResponse response) {
+  @Override
+  public RespBean doLogin(
+      LoginVo loginVo, HttpServletRequest request, HttpServletResponse response) {
         String mobile = loginVo.getMobile();
         String password = loginVo.getPassword();
         User user = (User) userMapper.selectById(mobile);

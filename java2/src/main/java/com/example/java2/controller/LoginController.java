@@ -30,12 +30,8 @@ public class LoginController {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    public LoginController() {
-    }
-
     @GetMapping("/login")
     public String docym() {
-    System.out.println(111);
         return "login";
     }
 
@@ -54,4 +50,24 @@ public class LoginController {
 
         return userService.doRegister(registerVo, request, response);
     }
+
+  //  @GetMapping("/captcha")
+  //  public String verifyCode(HttpServletResponse response) {
+  //    response.setContentType("image/gif");
+  //    response.setHeader("Pragma", "No-cache");
+  //    response.setHeader("Cache-Control", "no-cache");
+  //    response.setDateHeader("Expires", 0);
+  //    // 生成验证码
+  //    ArithmeticCaptcha captcha = new ArithmeticCaptcha(130, 28, 3);
+  //    try {
+  //      boolean out = captcha.out(response.getOutputStream());
+  //      if (out) {
+  //        return "captcha";
+  //      }
+  //
+  //    } catch (IOException e) {
+  //      e.printStackTrace();
+  //    }
+  //    return null;
+  //  }
 }
