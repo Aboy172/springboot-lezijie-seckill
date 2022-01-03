@@ -47,11 +47,7 @@ public class RabbitMQConfigTopic {
     private static final String QUEUE = "seckillQueue";
     private static final String EXCHANGE = "seckillExchange";
 
-
-    @Override
-    public boolean equals (Object obj) {
-        return super.equals(obj);
-    }
+    
     @Bean
     public Queue queue(){
         return new Queue(QUEUE);

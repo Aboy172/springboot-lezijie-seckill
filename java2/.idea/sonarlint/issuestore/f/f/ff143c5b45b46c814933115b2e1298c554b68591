@@ -1,0 +1,6 @@
+
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(çìıÿÿÿÿ
+×
+java:S1598"ÀThis file "MyLocaleResolver.java" should be located in "com\example\java2\LocaleResolver" directory, not in "D:\åšå®¢\springboot-seckill\java2\src\main\java\com\example\java2\localeresolver".(Ğ€ƒ±
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ€ƒ±

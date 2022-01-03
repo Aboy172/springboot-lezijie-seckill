@@ -1,6 +1,5 @@
 spring:
   #静态资源处理
-
   web:
     resources:
       add-mappings: true
@@ -19,8 +18,8 @@ spring:
     #????
     cache: false
     suffix: .html
-#    prefix: classpath:/templates/
-#    check-template-location: false
+  #    prefix: classpath:/templates/
+  #    check-template-location: false
   messages:
     basename: i18n/login
     encoding: UTF-8
@@ -28,9 +27,9 @@ spring:
 
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://49.234.138.59/seckill
+    url: jdbc:mysql://120.79.156.209:3306/seckill
     username: seckill
-    password: my159357
+    password: jpw6XisxGJwKJafG
     hikari:
       #????????????
       pool-name: DateHikariCP
@@ -60,11 +59,11 @@ spring:
         min-idle: 6
   rabbitmq:
     #服务器ip地址
-    host: 120.79.156.209
+    host: localhost
     #用户名
-    username: cym
+    username: guest
     #密码
-    password: my159357
+    password: guest
     #虚拟主机
     virtual-host: /
     #端口号
@@ -98,9 +97,7 @@ spring:
 
 
 mybatis-plus:
-
   mapper-locations: classpath*:/mapper/*Mapper.xml
-
   type-aliases-package: com.example.java2.pojo
   configuration:
     map-underscore-to-camel-case: true

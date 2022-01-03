@@ -7,18 +7,20 @@ import com.example.java2.vo.GoodsVO;
 import com.example.java2.vo.orderDetailVo;
 
 /**
- * <p>
- *  服务类
- * </p>
- * Cym
+ * 服务类 Cym
+ *
  * @author cym
  * @since 2021-12-14
  */
 public interface IOrderService extends IService<Order> {
 
+  Order seckill(User user, GoodsVO goods);
 
-   Order seckill (User user, GoodsVO goods);
+  orderDetailVo detail(Long orderId);
 
+  String createPath(User user, Long goodsId);
 
-    orderDetailVo detail (Long orderId);
+  Boolean checkPath(User user, Long goodsId, String path);
+
+  Boolean checkCpatcha(User user, Long goodsId, String captcha);
 }

@@ -1,0 +1,25 @@
+
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(‚†®÷
+[	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(÷¯´³
+U
+java:S18546":Remove this useless assignment to local variable "delete".(ÌÇ§Äøÿÿÿÿ
+V
+java:S18548";Remove this useless assignment to local variable "newFile".(øÚßúÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(œ‡êü
+\
+java:S10754"ARefactor your code to get this URI from a customizable parameter.(õØËÃøÿÿÿÿ
+U	java:S8996";Do something with the "boolean" value returned by "delete".(ÌÇ§Äøÿÿÿÿ
+i
+java:S40426"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(ÌÇ§Äøÿÿÿÿ
+F
+java:S14816"+Remove this unused "delete" local variable.(ÌÇ§Äøÿÿÿÿ
+\	java:S8998"BDo something with the "boolean" value returned by "createNewFile".(øÚßúÿÿÿÿ
+G
+java:S14818",Remove this unused "newFile" local variable.(øÚßúÿÿÿÿ
+N	java:S106R"9Replace this use of System.out or System.err by a logger.(ÑüÏ¯
+S	java:S106X"9Replace this use of System.out or System.err by a logger.(äëüÿÿÿÿ
+S	java:S106["9Replace this use of System.out or System.err by a logger.(§„ùÖûÿÿÿÿ
+B
+java:S1144_",Remove this unused private "getConn" method.(÷¯´³
+i
+java:S2095:"NUse try-with-resources or close this "RandomAccessFile" in a "finally" clause.(à”ô…úÿÿÿÿ

@@ -18,6 +18,18 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
+    <facet type="JRebel" name="JRebel">
+      <configuration>
+        <option name="ideModuleStorage">
+          <map>
+            <entry key="com.zeroturnaround.jrebel.FormatVersion" value="7.0.0" />
+            <entry key="jrebelEnabled" value="true" />
+            <entry key="lastExternalPluginCheckTime" value="1640670427524" />
+          </map>
+        </option>
+        <option name="version" value="6" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -137,6 +149,7 @@
     <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.3.1" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: com.rabbitmq:amqp-client:5.12.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.whvcse:easy-captcha:1.6.2" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger2:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-spi:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.springfox:springfox-core:3.0.0" level="project" />
@@ -156,5 +169,6 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.mapstruct:mapstruct:1.3.1.Final" level="project" />
     <orderEntry type="library" name="Maven: com.github.caspar-chen:swagger-ui-layer:1.1.3" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.79" level="project" />
   </component>
 </module>

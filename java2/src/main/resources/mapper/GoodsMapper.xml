@@ -52,7 +52,7 @@
         t_goods g
         LEFT JOIN t_seckill_goods sg ON g.id = sg.goods_id
         WHERE
-        g.id = ${goodsId};
+        g.id = #{goodsId};
     </select>
 
 
