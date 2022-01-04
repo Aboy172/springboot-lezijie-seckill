@@ -1,5 +1,7 @@
 package com.example.java2.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.java2.pojo.User;
 import com.example.java2.vo.LoginVo;
@@ -33,4 +35,6 @@ public interface IUserService extends IService<User> {
      * @return
      */
     RespBean updatepassword(String userTicket,String password,HttpServletRequest request,HttpServletResponse response);
+
+    IPage<User> selectUserPage (Page<User> page);
 }

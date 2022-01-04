@@ -5,6 +5,8 @@
 
 package com.example.java2.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.java2.exception.GlobalException;
 import com.example.java2.mapper.UserMapper;
@@ -125,8 +127,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     }
 
-
-
+    @Override
+    public IPage<User> selectUserPage (Page<User> page) {
+        return userMapper.selectUserPage(page);
+    }
 
 
 }

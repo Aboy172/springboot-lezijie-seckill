@@ -1,7 +1,7 @@
 package com.example.java2.config;
 
 import com.example.java2.LocaleResolver.MyLocaleResolver;
-import com.example.java2.controller.AccessLimitInterceptor;
+import com.example.java2.interceptor.AccessLimitInterceptor;
 import com.example.java2.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

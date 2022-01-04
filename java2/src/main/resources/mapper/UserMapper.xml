@@ -17,5 +17,17 @@
     <sql id="Base_Column_List">
         id, nickname, password, slat, register_date, last_login_date, login_count
     </sql>
+    <select id="selectUserPage" resultType="com.example.java2.pojo.User">
+        SELECT
+        id,
+        nickname,
+        PASSWORD,
+        slat,
+        register_date,
+        last_login_date,
+        login_count
+        FROM
+        t_user
+    </select>
 
 </mapper>
