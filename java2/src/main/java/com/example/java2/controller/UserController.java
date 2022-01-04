@@ -1,7 +1,18 @@
 package com.example.java2.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.java2.pojo.User;
+import com.example.java2.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -15,6 +26,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
+    @Autowired
+    private IUserService userService;
+
+    @GetMapping("/login")
+    public String user(){
+        return "User";
+    }
+
+
+
+    @GetMapping("/list")
+    @ResponseBody
+    public Map list(@RequestParam Integer pageNum,@RequestParam Integer pageSize){
+        Map<String, Object> returnMap  = new HashMap<>();
+        Page<User> page = new Page<>(pageNum, pageSize);
+        IPage<User> data = userService.selectUserPage(page);
+        returnMap.put("count", data.getTotal());
+        returnMap.put("data", data.getRecords());
+        return returnMap;
+    }
+
 
 
 //    @Autowired

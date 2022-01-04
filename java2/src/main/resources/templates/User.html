@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+    <script type="text/javascript" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <!-- jquery-validator -->
+    <script type="text/javascript" th:src="@{/jquery-validation/jquery.validate.min.js}"></script>
+    <script type="text/javascript" th:src="@{/jquery-validation/localization/messages_zh.min.js}"></script>
+    <!-- layer -->
+    <script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+    <!-- md5.js -->
+    <script type="text/javascript" th:src="@{/js/md5.min.js}"></script>
+    <!-- common.js -->
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <meta charset="UTF-8">
+    <title>分页展示</title>
+</head>
+<body>
+<table id="jqGrid" class="table table-bordered">
+</table>
+<div id="jqGridPager"></div>
+</div><!-- /.card-body -->
+<label for="pageNum"></label><input id="pageNum" type="text"/>
+<label for="pageSize"></label><input id = "pageSize" type="text">
+<button type="button" id = "userButton" onclick="selectUser()"> Select User</button>
+<!--<label th:text="${data.nickname}"></label>-->
+</body>
+<script>
+    function selectUser() {
+        g_showLoading();
+        var pageNum = $("#pageNum").val();
+        var pageSize = $("#pageSize").val();
+        $.ajax({
+            url: 'list',
+            type: 'GET',
+            data: {pageNum:pageNum,
+                    pageSize:pageSize},
+            success: function(data) {
+                if (data.code == 200){
+                    layer.msg("展示中");
+                }
+                else {
+                    layer.msg(data.message);
+                }
+            },
+            error: function(){
+                layer.msg("Error");
+            }
+        })
+    }
+
+
+
+</script>
+</html>

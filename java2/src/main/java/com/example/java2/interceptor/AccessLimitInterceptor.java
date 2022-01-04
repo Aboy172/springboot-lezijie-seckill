@@ -1,4 +1,4 @@
-package com.example.java2.controller;
+package com.example.java2.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.example.java2.config.AccessLimit;
@@ -59,11 +59,8 @@ public class AccessLimitInterceptor implements HandlerInterceptor {
           redner(response, RespBeanEnum.REQUEST_MANY_ERROR);
         }
       }
-      return true;
     }
-
-    User user = getUser(request, response);
-    return HandlerInterceptor.super.preHandle(request, response, handler);
+    return true;
   }
 
   /**

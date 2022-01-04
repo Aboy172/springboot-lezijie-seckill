@@ -17,6 +17,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -51,7 +52,7 @@ public class GoodsController {
     @Autowired
     private ThymeleafViewResolver thymeleafViewResolver;
 
-    @RequestMapping(value = "/toList",produces = "text/html;charset=UTF-8")
+    @GetMapping(value = "/toList",produces = "text/html;charset=UTF-8")
     @ResponseBody
     public String toList(HttpServletRequest request,HttpServletResponse response,Model model,User user) {
         //从Redis中获取页面，如果不为空，直接返回页面
