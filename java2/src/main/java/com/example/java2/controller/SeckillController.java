@@ -21,6 +21,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
@@ -29,6 +30,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,6 +52,7 @@ public class SeckillController implements InitializingBean {
   @Autowired private IOrderService orderService;
   @Autowired private RedisTemplate redisTemplate;
   @Autowired private MQSender mqSender;
+  @Autowired private DefaultRedisScript<Long> script;
 
   private Map<Long, Boolean> EmptyStockMap = new HashMap<>();
 
@@ -71,11 +74,13 @@ public class SeckillController implements InitializingBean {
     if (seckillOrders != null) {
       return RespBean.error(RespBeanEnum.REPT_ERROR);
     }
+    //减少对Redis的访问
     if (EmptyStockMap.get(goodsId)) {
       return RespBean.error(RespBeanEnum.COUNT_NOT);
     }
     // 获取库存
-    Long stock = valueOperations.decrement("seckillGoods" + goodsId);
+    //Long stock = valueOperations.decrement("seckillGoods" + goodsId);
+    Long stock = (Long) redisTemplate.execute(script,Collections.singletonList("seckillGoods"+goodsId),Collections.EMPTY_LIST);
     if (stock < 0) {
       EmptyStockMap.put(goodsId, true);
       valueOperations.increment("seckillGoods" + goodsId);
@@ -184,16 +189,6 @@ public class SeckillController implements InitializingBean {
     if (user == null) {
       return RespBean.error(RespBeanEnum.SEESION_ERROR);
     }
-    // ValueOperations valueOperations = redisTemplate.opsForValue();
-    // String uri = request.getRequestURI();
-    // Integer count = (Integer) valueOperations.get(uri + ":" + user.getId());
-    // if (count == null) {
-    //  valueOperations.set(uri + ":" + user.getId(), 1, 5, TimeUnit.SECONDS);
-    // } else if (count < 5) {
-    //  valueOperations.increment(uri + ":" + user.getId());
-    // } else {
-    //  return RespBean.error(RespBeanEnum.REQUEST_MANY_ERROR);
-    // }
     boolean check = orderService.checkCpatcha(user, goodsId, captcha);
     if (!check) {
       return RespBean.error(RespBeanEnum.CAPTCHA_ERROR);
