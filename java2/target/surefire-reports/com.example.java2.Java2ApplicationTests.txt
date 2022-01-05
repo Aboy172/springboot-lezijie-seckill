@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.java2.Java2ApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.83 s - in com.example.java2.Java2ApplicationTests

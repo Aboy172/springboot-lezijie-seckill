@@ -15,7 +15,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -44,7 +43,7 @@ public class LoginController {
 
 
     }
-    @RequestMapping("/doRegister")
+    @PostMapping("/doRegister")
     @ResponseBody
     public RespBean doRegister(@Valid RegisterVo registerVo, HttpServletRequest request, HttpServletResponse response) {
 
