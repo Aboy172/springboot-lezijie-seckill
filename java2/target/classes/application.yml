@@ -15,11 +15,8 @@ spring:
 
   #thymelaef
   thymeleaf:
-    #????
     cache: false
     suffix: .html
-  #    prefix: classpath:/templates/
-  #    check-template-location: false
   messages:
     basename: i18n/login
     encoding: UTF-8
@@ -68,7 +65,6 @@ spring:
     virtual-host: /
     #端口号
     port: 5672
-
     listener:
       simple:
         #消费者最小数量

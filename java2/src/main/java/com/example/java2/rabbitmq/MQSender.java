@@ -1,6 +1,6 @@
 package com.example.java2.rabbitmq;
 
-import com.example.java2.utils.JsonUtil;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,9 +45,9 @@ public class MQSender {
 //        rabbitTemplate.convertAndSend("topicExchange","orange.orange.rabbitmq",msg);
 //    }
         public void sendSeckillMessage(String message){
+             JSON.toJSONString(message);
             log.info("发送的消息是"+message);
             rabbitTemplate.convertAndSend("seckillExchange","seckill.message",message);
-            String s = JsonUtil.object2JsonStr(message);
 
 
         }
