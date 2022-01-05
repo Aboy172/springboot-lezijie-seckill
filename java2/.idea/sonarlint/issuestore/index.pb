@@ -49,8 +49,6 @@ n
 >src/main/java/com/example/java2/controller/TestController.java,6\e\6e74cbd6d048e978e061b9ff31fa13ddea1a642a
 o
 ?src/main/java/com/example/java2/config/RabbitMQConfigTopic.java,9\a\9ad36448a6ab0b97f989dd631cb86c56775e3986
-g
-7src/main/java/com/example/java2/config/RedisConfig.java,6\0\6015a1be7e5fb006b43be79c160576368f3d821d
 p
 @src/main/java/com/example/java2/config/RabbitMQConfigFanout.java,e\7\e7cdef21c0fed158e13916b57532be4cfe133e79
 p
@@ -69,5 +67,3 @@ p
 @src/main/java/com/example/java2/config/RabbitMQConfigDirect.java,9\e\9e43edc5e9a08fdfb0eec9b9f21ae306434b46d1
 q
 Asrc/main/java/com/example/java2/interceptor/LoginInterceptor.java,2\f\2f9700b61e466a846d2cfdd70f9b9cb8843adbb2
-q
-Asrc/main/java/com/example/java2/controller/SeckillController.java,4\f\4f84573068daca55e11b7f13ff60874fc65a11b0
