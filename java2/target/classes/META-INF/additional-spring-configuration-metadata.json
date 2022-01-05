@@ -4,5 +4,10 @@
       "name": "spring.web.resources.chain.html-appliaction-cache",
       "type": "java.lang.String",
       "description": "Description for spring.web.resources.chain.html-appliaction-cache."
-  }
-] }
+    },
+    {
+      "name": "spring.rabbitmq.datasource.driverClassName.url",
+      "type": "java.lang.String",
+      "description": "Description for spring.rabbitmq.datasource.driverClassName.url."
+    }
+  ] }
