@@ -1,17 +1,4 @@
 spring:
-  #静态资源处理
-  web:
-    resources:
-      add-mappings: true
-      cache:
-        cachecontrol:
-          max-age: 3600
-      chain:
-        cache: true
-        enabled: true
-        compressed: true
-        html-appliaction-cache: true
-      static-locations: classpath:/static/
 
   #thymelaef
   thymeleaf:
@@ -20,27 +7,18 @@ spring:
   messages:
     basename: i18n/login
     encoding: UTF-8
-
-
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://120.79.156.209:3306/seckill
     username: seckill
     password: jpw6XisxGJwKJafG
     hikari:
-      #????????????
       pool-name: DateHikariCP
-      #??????
       minimum-idle: 5
-      #??????????????10??(600000)
       idle-timeout: 600000
-      #?????????10
       maximum-pool-size: 10
-      #?????????0?????????1800000(30??)
       max-lifetime: 800000
-      #??????,??30000(30?)
-      connection-timeout: 30000
-      #?????????????
+      connection-timeout: 3000
       connection-test-query: SELECT 1
   #redis配置
   redis:
@@ -89,9 +67,6 @@ spring:
         max-interval: 10000ms
         #重试的间隔系数，如配2.0，第一次等待1s，第二次等待2s，第三次等待4次
         multiplier: 1
-
-
-
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   type-aliases-package: com.example.java2.pojo
