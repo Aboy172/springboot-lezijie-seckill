@@ -35,8 +35,10 @@ public class WebConfig implements WebMvcConfigurer {
   /** 默认配置类大于配置文件， 所以如果写了配置类以后是不会再去拿配置文件的的东西 */
   @Override
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
+    //解决静态资源无法访问
     registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+    registry.addResourceHandler("/swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
+    registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
   }
 
   @Override

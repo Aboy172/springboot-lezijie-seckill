@@ -56,6 +56,13 @@ public class SeckillController implements InitializingBean {
 
   private Map<Long, Boolean> EmptyStockMap = new HashMap<>();
 
+  /**
+   * 功能：秒杀
+   * @param path
+   * @param user
+   * @param goodsId
+   * @return
+   */
   @PostMapping("/{path}/doSeckill")
   @ResponseBody
   public RespBean doSeckill(@PathVariable("path") String path, User user, Long goodsId) {
