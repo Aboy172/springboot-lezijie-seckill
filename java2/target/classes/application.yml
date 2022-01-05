@@ -1,103 +1,11 @@
 spring:
-  #静态资源处理
-  web:
-    resources:
-      add-mappings: true
-      cache:
-        cachecontrol:
-          max-age: 3600
-      chain:
-        cache: true
-        enabled: true
-        compressed: true
-        html-appliaction-cache: true
-      static-locations: classpath:/static/
-
-  #thymelaef
-  thymeleaf:
-    cache: false
-    suffix: .html
-  messages:
-    basename: i18n/login
-    encoding: UTF-8
-
-
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://120.79.156.209:3306/seckill
-    username: seckill
-    password: jpw6XisxGJwKJafG
-    hikari:
-      #????????????
-      pool-name: DateHikariCP
-      #??????
-      minimum-idle: 5
-      #??????????????10??(600000)
-      idle-timeout: 600000
-      #?????????10
-      maximum-pool-size: 10
-      #?????????0?????????1800000(30??)
-      max-lifetime: 800000
-      #??????,??30000(30?)
-      connection-timeout: 30000
-      #?????????????
-      connection-test-query: SELECT 1
-  #redis配置
-  redis:
-    host: localhost
-    port: 6379
-    database: 0
-    timeout: 100000ms
-    lettuce:
-      pool:
-        max-active: 8
-        max-wait: 10000ms
-        max-idle: 200
-        min-idle: 6
-  rabbitmq:
-    #服务器ip地址
-    host: localhost
-    #用户名
-    username: guest
-    #密码
-    password: guest
-    #虚拟主机
-    virtual-host: /
-    #端口号
-    port: 5672
-    listener:
-      simple:
-        #消费者最小数量
-        concurrency: 10
-        #消费者最大数量
-        max-concurrency: 10
-        #限制消费者每次只能处理一条信息，之后才能处理下一条信息
-        prefetch: 1
-        #启动时默认启动容器
-        auto-startup: true
-        #被拒绝后是否重新连接 true
-        de-batching-enabled: true
-    template:
-      retry:
-        #发布重试,默认false
-        enabled: false
-        #重试时间，默认1000ms
-        initial-interval: 1000ms
-        #默认最大重试次数，默认三次
-        max-attempts: 3
-        #默认最大重试世界，默认最大10000ms
-        max-interval: 10000ms
-        #重试的间隔系数，如配2.0，第一次等待1s，第二次等待2s，第三次等待4次
-        multiplier: 1
-
-
-
+  profiles:
+    active: dev
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*Mapper.xml
   type-aliases-package: com.example.java2.pojo
   configuration:
     map-underscore-to-camel-case: true
-
 logging:
   level:
     com.example.java2.mapper: debug
